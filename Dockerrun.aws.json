@@ -25,7 +25,7 @@
     {
       "name": "nginx",
       "image": "astelware/multi-docker-nginx",
-      "hostname": "client",
+      "hostname": "nginx",
       "essential": true,
       "portMappings": [
         {
