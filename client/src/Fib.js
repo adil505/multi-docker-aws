@@ -11,6 +11,17 @@ class Fib extends Component {
   componentDidMount() {
     this.fetchValues();
     this.fetchIndexes();
+    // try unregistering serviceWorker
+    // copied below section for if and else from Peter's comment on https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11482940#questions/7777774
+    if ('serviceWorker' in navigator)
+    {
+      var unregistration = navigator.serviceWorker.getRegistration.unregister();
+      console.log('unregistration: ' + unregistration)  ;
+    }
+    else
+    {
+      console.log('serviceWorker not found in navigator')
+    }
   }
 
   async fetchValues() {
